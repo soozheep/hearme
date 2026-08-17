@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hear Me — Sonic Remedy | Soozhee</title>
+  <meta name="description" content="Hear Me by Soozhee. Sonic Remedy : Audiosensory Resonance. Alien Frequencies." />
+  <meta property="og:title" content="Hear Me — Sonic Remedy | Soozhee" />
+  <meta property="og:description" content="Hear Me by Soozhee. Sonic Remedy : Audiosensory Resonance | Alien Frequencies." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hearme.vercel.app" />
+  <meta property="og:image" content="assets/hm-cover.PNG" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0a0a0b" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header>
+    <div class="container nav">
+      <a href="https://sonicremedy01.vercel.app" class="logo">
+        <span class="logo-mark">SR</span>
+        <div class="logo-text">
+          <span class="logo-title">Sonic Remedy</span>
+          <span class="logo-sub">Audiosensory Resonance</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="#listen">Listen</a>
+        <a href="#lyrics">Lyrics</a>
+        <a href="#about">Explore the Song</a>
+        <a href="#stream">Stream</a>
+      </nav>
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#listen" onclick="closeMobileMenu()">Listen</a>
+      <a href="#lyrics" onclick="closeMobileMenu()">Lyrics</a>
+      <a href="#about" onclick="closeMobileMenu()">Explore the Song</a>
+      <a href="#stream" onclick="closeMobileMenu()">Stream</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="listen">
+      <div class="container hero-grid">
+        <div class="hero-art">
+          <img src="assets/hm-cover.PNG" alt="Hear Me cover art by Soozhee" class="cover-img" />
+        </div>
+        <div class="hero-content">
+          <div class="badge">Sonic Remedy · Audiosensory Resonance</div>
+          <h1>Hear Me – Remedy 06 – No.88 Alien Frequencies</h1>
+          <p class="artist">Soozhee</p>
+          <p class="tagline">Hear Me.<br>Alien Frequencies.</p>
+
+          <div class="player-wrap">
+            <audio id="audio" src="assets/06_Hear-Me.mp3" preload="metadata"></audio>
+            <div class="player">
+              <button class="play-btn" id="playBtn" aria-label="Play">
+                <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+              </button>
+              <div class="player-meta">
+                <div class="track-title">Hear Me</div>
+                <div class="progress-wrap">
+                  <div class="progress-bar" id="progressBar">
+                    <div class="progress-fill" id="progressFill"></div>
+                  </div>
+                  <div class="time">
+                    <span id="currentTime">0:00</span>
+                    <span id="duration">0:00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stream-links" id="stream">
+            <a class="stream-btn" href="#" target="_blank" rel="noopener">Spotify</a>
+            <a class="stream-btn" href="#" target="_blank" rel="noopener">Apple Music</a>
+            <a class="stream-btn" href="#" target="_blank" rel="noopener">Amazon Music</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="lyrics">
+      <div class="container">
+        <h2 class="section-title">Lyric Cards</h2>
+        <p class="section-sub">Shareable lyric frames in order. Tap any card to open full size. One-click share to socials.</p>
+        <div class="grid lyrics-grid">
+
+          <article class="card" data-title="Hear Me — 01/3" data-text="Hear Me by Soozhee | hearme.vercel.app" data-img="assets/lyrics/hm-01.png">
+            <div class="card-img-wrap"><span class="card-num">01</span><a href="assets/lyrics/hm-01.png" target="_blank" rel="noopener"><img class="card-img" src="assets/lyrics/hm-01.png" alt="Lyric card 01" loading="lazy" /></a></div>
+            <div class="card-body"><div class="share-bar"><button class="share-btn primary" onclick="shareCard(this)">Share</button><a class="share-btn" href="#" onclick="shareTo('x', this); return false;">𝕏</a><a class="share-btn" href="#" onclick="shareTo('fb', this); return false;">Facebook</a><a class="share-btn" href="#" onclick="shareTo('li', this); return false;">LinkedIn</a><a class="share-btn" href="#" onclick="shareTo('email', this); return false;">Email</a><button class="share-btn" onclick="copyLink(this)">Copy</button><a class="share-btn" download="hm-01.png" href="assets/lyrics/hm-01.png">Download</a></div></div>
+          </article>
+
+          <article class="card" data-title="Hear Me — 02/3" data-text="Hear Me by Soozhee | hearme.vercel.app" data-img="assets/lyrics/hm-02.png">
+            <div class="card-img-wrap"><span class="card-num">02</span><a href="assets/lyrics/hm-02.png" target="_blank" rel="noopener"><img class="card-img" src="assets/lyrics/hm-02.png" alt="Lyric card 02" loading="lazy" /></a></div>
+            <div class="card-body"><div class="share-bar"><button class="share-btn primary" onclick="shareCard(this)">Share</button><a class="share-btn" href="#" onclick="shareTo('x', this); return false;">𝕏</a><a class="share-btn" href="#" onclick="shareTo('fb', this); return false;">Facebook</a><a class="share-btn" href="#" onclick="shareTo('li', this); return false;">LinkedIn</a><a class="share-btn" href="#" onclick="shareTo('email', this); return false;">Email</a><button class="share-btn" onclick="copyLink(this)">Copy</button><a class="share-btn" download="hm-02.png" href="assets/lyrics/hm-02.png">Download</a></div></div>
+          </article>
+
+          <article class="card" data-title="Hear Me — 03/3" data-text="Hear Me by Soozhee | hearme.vercel.app" data-img="assets/lyrics/hm-03.png">
+            <div class="card-img-wrap"><span class="card-num">03</span><a href="assets/lyrics/hm-03.png" target="_blank" rel="noopener"><img class="card-img" src="assets/lyrics/hm-03.png" alt="Lyric card 03" loading="lazy" /></a></div>
+            <div class="card-body"><div class="share-bar"><button class="share-btn primary" onclick="shareCard(this)">Share</button><a class="share-btn" href="#" onclick="shareTo('x', this); return false;">𝕏</a><a class="share-btn" href="#" onclick="shareTo('fb', this); return false;">Facebook</a><a class="share-btn" href="#" onclick="shareTo('li', this); return false;">LinkedIn</a><a class="share-btn" href="#" onclick="shareTo('email', this); return false;">Email</a><button class="share-btn" onclick="copyLink(this)">Copy</button><a class="share-btn" download="hm-03.png" href="assets/lyrics/hm-03.png">Download</a></div></div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title">Explore the Song</h2>
+        <p class="section-sub">Explore the patterns, questions, and possibilities within Hear Me.</p>
+        <div class="grid about-grid">
+
+          <article class="card card-wide" data-title="The Pattern — Hear Me" data-text="Hear Me by Soozhee. — hearme.vercel.app" data-img="assets/cards/hm-card-01.png">
+            <div class="card-img-wrap"><span class="card-num">01 / 04</span><a href="assets/cards/hm-card-01.png" target="_blank" rel="noopener"><img class="card-img" src="assets/cards/hm-card-01.png" alt="The Pattern" loading="lazy" /></a></div>
+            <div class="card-body"><h3>The Pattern</h3><p>The call that demands to be heard.</p><div class="share-bar"><button class="share-btn primary" onclick="shareCard(this)">Share</button><a class="share-btn" href="#" onclick="shareTo('x', this); return false;">𝕏</a><a class="share-btn" href="#" onclick="shareTo('fb', this); return false;">Facebook</a><a class="share-btn" href="#" onclick="shareTo('li', this); return false;">LinkedIn</a><a class="share-btn" href="#" onclick="shareTo('email', this); return false;">Email</a><button class="share-btn" onclick="copyLink(this)">Copy</button><a class="share-btn" download="hm-card-01.png" href="assets/cards/hm-card-01.png">Download</a></div></div>
+          </article>
+
+          <article class="card card-wide" data-title="The Mechanism — Hear Me" data-text="Hear Me by Soozhee. — hearme.vercel.app" data-img="assets/cards/hm-card-02.png">
+            <div class="card-img-wrap"><span class="card-num">02 / 04</span><a href="assets/cards/hm-card-02.png" target="_blank" rel="noopener"><img class="card-img" src="assets/cards/hm-card-02.png" alt="The Mechanism" loading="lazy" /></a></div>
+            <div class="card-body"><h3>The Mechanism</h3><p>What happens when the signal lands.</p><div class="share-bar"><button class="share-btn primary" onclick="shareCard(this)">Share</button><a class="share-btn" href="#" onclick="shareTo('x', this); return false;">𝕏</a><a class="share-btn" href="#" onclick="shareTo('fb', this); return false;">Facebook</a><a class="share-btn" href="#" onclick="shareTo('li', this); return false;">LinkedIn</a><a class="share-btn" href="#" onclick="shareTo('email', this); return false;">Email</a><button class="share-btn" onclick="copyLink(this)">Copy</button><a class="share-btn" download="hm-card-02.png" href="assets/cards/hm-card-02.png">Download</a></div></div>
+          </article>
+
+          <article class="card card-wide" data-title="The Opening — Hear Me" data-text="Hear Me by Soozhee. — hearme.vercel.app" data-img="assets/cards/hm-card-03.png">
+            <div class="card-img-wrap"><span class="card-num">03 / 04</span><a href="assets/cards/hm-card-03.png" target="_blank" rel="noopener"><img class="card-img" src="assets/cards/hm-card-03.png" alt="The Opening" loading="lazy" /></a></div>
+            <div class="card-body"><h3>The Opening</h3><p>When listening becomes the response.</p><div class="share-bar"><button class="share-btn primary" onclick="shareCard(this)">Share</button><a class="share-btn" href="#" onclick="shareTo('x', this); return false;">𝕏</a><a class="share-btn" href="#" onclick="shareTo('fb', this); return false;">Facebook</a><a class="share-btn" href="#" onclick="shareTo('li', this); return false;">LinkedIn</a><a class="share-btn" href="#" onclick="shareTo('email', this); return false;">Email</a><button class="share-btn" onclick="copyLink(this)">Copy</button><a class="share-btn" download="hm-card-03.png" href="assets/cards/hm-card-03.png">Download</a></div></div>
+          </article>
+
+          <article class="card card-wide" data-title="Listen Like a Remedy — Hear Me" data-text="Hear Me by Soozhee. — hearme.vercel.app" data-img="assets/cards/hm-card-04.png">
+            <div class="card-img-wrap"><span class="card-num">04 / 04</span><a href="assets/cards/hm-card-04.png" target="_blank" rel="noopener"><img class="card-img" src="assets/cards/hm-card-04.png" alt="Listen Like a Remedy" loading="lazy" /></a></div>
+            <div class="card-body"><h3>Listen Like a Remedy</h3><p>Who is ready to hear you?</p><div class="share-bar"><button class="share-btn primary" onclick="shareCard(this)">Share</button><a class="share-btn" href="#" onclick="shareTo('x', this); return false;">𝕏</a><a class="share-btn" href="#" onclick="shareTo('fb', this); return false;">Facebook</a><a class="share-btn" href="#" onclick="shareTo('li', this); return false;">LinkedIn</a><a class="share-btn" href="#" onclick="shareTo('email', this); return false;">Email</a><button class="share-btn" onclick="copyLink(this)">Copy</button><a class="share-btn" download="hm-card-04.png" href="assets/cards/hm-card-04.png">Download</a></div></div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2>Hear Me.</h2>
+        <p>Alien Frequencies.</p>
+        <div class="share-bar" style="justify-content:center;">
+          <button class="share-btn primary" onclick="sharePage()">Share this page</button>
+          <button class="share-btn" onclick="copyPageLink()">Copy link</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="footer-brand">Sonic Remedy : Audiosensory Resonance</p>
+      <p>Hear Me · Vocals, lyrics & composed by Soozhee · Produced by Caelverum Music</p>
+      <p class="fineprint">© Soozhee and Caelverum Music. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" aria-label="Close">×</button>
+      <img id="lightboxImg" src="" alt="Full size card" />
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
