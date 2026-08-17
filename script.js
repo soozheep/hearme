@@ -1,4 +1,4 @@
-const SITE_URL = 'https://hearme.vercel.app';
+const SITE_URL = 'https://hear-me-soozhee.vercel.app';
 
 function getCardData(el) {
   const card = el.closest('.card');
@@ -113,6 +113,7 @@ document.addEventListener('keydown', function (e) {
 (function () {
   const audio = document.getElementById('audio');
   const playBtn = document.getElementById('playBtn');
+  if (!audio || !playBtn) return;
   const progressBar = document.getElementById('progressBar');
   const progressFill = document.getElementById('progressFill');
   const currentTimeEl = document.getElementById('currentTime');
